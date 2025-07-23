@@ -17,3 +17,4 @@ DevSecOps-Blogs
 My daily DevSecOps learning notes and blogs
 
 Updated README with full blog intro
+for more details visit blog : https://devsecopsbasics.blogspot.com/
