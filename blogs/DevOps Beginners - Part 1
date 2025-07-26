@@ -1,0 +1,167 @@
+# 🛠️ DevOps Beginners - Part 1  
+**📅 June 21, 2025**  
+**👤 By Kalyan**  
+
+---
+
+## 🚀 Welcome to My DevSecOps Journey!
+
+Hello and welcome!
+
+I’m **Kalyan**, and I’m so excited to have you here. I’ve always had a deep passion for learning new skills, and this blog is my way of sharing the things that inspire and motivate me. Whether you’re just beginning your tech journey or are looking to dive deeper into **DevOps** and **DevSecOps**, you’re in the right place.
+
+> 🙏 Let me introduce the person who changed my life:  
+**Sivakumar**, a professional with **13 years of experience** in the IT industry (as of july 2025).  
+Under his guidance, I started learning **DevSecOps from scratch**.  
+Before his course, I was a complete beginner — a **non-IT professional** who didn’t even know what DevOps was.  
+Today, I proudly stand on the shoulders of that transformation.
+
+---
+
+## 🔧 What This Blog Is About
+
+This blog is divided into three parts:
+
+- 📘 **Course Journey** – My notes, summaries, and project experiences  
+- 💼 **Career Insights** – Opportunities available after learning DevSecOps  
+
+> I hope you find something here that resonates with you.  
+Feel free to leave a comment, ask questions, and join me on this exciting path!
+
+---
+
+## 🌟 Debunking a Myth
+
+There is a **common misconception** that learning DevOps only leads to DevOps Engineer roles.  
+That’s simply **not true**!
+
+Here are **six powerful career options** you can pursue after mastering DevSecOps:
+
+1. 🛠️ DevOps / DevSecOps Engineer  
+2. 🔧 Site Reliability Engineer (SRE)  
+3. ☁️ Cloud Engineer  
+4. 🤖 Automation Engineer  
+5. 🐳 Kubernetes Administrator  
+6. 🧱 Infrastructure as Code (IaC) Specialist  
+
+---
+
+## ✏️ My DevSecOps Course Highlights
+
+### 🏗️ 1. Foundations of DevOps
+
+- What is DevOps?  
+- Waterfall vs Agile vs DevOps  
+- Software Development Life Cycle (SDLC)  
+
+### 💻 2. System & Cloud Basics
+
+- What is a Computer?  
+- Client-Server Architecture  
+- Authentication Mechanisms  
+- Public and Private Keys  
+- Firewall Creation (AWS Security Groups)  
+- Importing Keypairs  
+- EC2 Instance Creation  
+
+### 🐧 3. Linux Essentials
+
+- Basic Commands  
+- VIM Editor  
+- User Management  
+- Permissions and Ownership  
+- Package Management  
+- Service Management  
+
+### 🏛️ 4. Real-World Architecture
+
+- 3-Tier Architecture  
+- Project Initialization  
+- MySQL Configuration  
+- Public vs Private IP  
+- Reverse vs Forward Proxy  
+- Backend & Frontend Setup  
+
+### 🌐 5. DNS & System Internals
+
+- How DNS Works  
+- Domain Booking  
+- Project Using DNS  
+- Inode, Symlink, and Hardlink  
+
+### 🔍 6. HTTP & Troubleshooting
+
+- HTTP Methods & Status Codes  
+- Linux Folder Structure  
+- Troubleshooting Commands  
+
+### 📜 7. Shell Scripting
+
+- Git Introduction  
+- Shell Basics: Variables, Data Types, Arrays  
+- Conditions & Special Variables  
+- Exit Status & Functions  
+- Colors, Logs, and Redirection  
+- Loops  
+
+### 📂 8. Shell Projects
+
+- Expense Tracker Project  
+  - MySQL  
+  - Backend  
+  - Frontend  
+- Idempotency  
+- Log Cleanup Script  
+- Backup Script  
+- Cronjobs  
+- Native Shell Commands  
+- Disk Usage & Email Alerts  
+- Running Scripts from Scripts  
+
+### 📦 9. Ansible - Configuration Management
+
+- Why Shell Isn’t Enough  
+- What is Configuration Management?  
+- Ansible Architecture  
+- Installation & Adhoc Commands  
+- XML vs JSON vs YAML  
+- Writing Playbooks  
+
+### ⚙️ 10. Advanced Ansible
+
+- Variables, Plays, and Tasks  
+- Files, Prompts, and Inventory  
+- Args & Data Types  
+- Conditions, Loops, and Functions  
+- Ansible Facts  
+- Command vs Shell Modules  
+
+### 🛠️ 11. Ansible Project: Expense Setup
+
+- Expense App with MySQL, Backend, Frontend  
+- Using Ansible Roles & Tags  
+
+---
+
+> 📍 **This is just the beginning.**  
+Think of it as **Part 1** of a 3-part journey, laying the foundation for mastering **DevSecOps**.
+
+Right now, we’re keeping things **low-key and strategic** — quietly building skills and confidence behind the scenes.
+
+Later, we’ll go deeper into **advanced topics**.  
+But for now, this stage is all about **understanding the structure**, **gaining control**, and **preparing for real-world implementation**.
+
+> We treat this as a **syllabus**, not just content — every concept builds toward a powerful outcome.
+
+---
+
+## 📚 Final Words
+
+Whether you’re a **beginner** or looking to **specialize in DevSecOps**,  
+I hope this blog becomes your **go-to guide** for mastering the field **step by step**.
+
+Thank you for joining my journey.  
+**Let’s build something powerful together.**
+visit blog for more details : https://devsecopsbasics.blogspot.com/
+
+— *Kalyan* 
