@@ -1,0 +1,95 @@
+# 🚀 Beginner’s Guide: Set Up Git & GitHub the Easy Way
+
+If you're just starting out in coding or tech, this guide will walk you through creating a GitHub account, installing Git, and linking both tools step-by-step. Super friendly for beginners!
+
+---
+
+## 🐙 I. GitHub Account Creation
+
+### 💡 Why is a GitHub account important?
+
+GitHub helps you save, share, and manage your code online—great for working alone or with a team.
+
+### ✅ Steps:
+
+1. Go to [github.com](https://github.com/) and click **“Sign up.”**
+2. Use a professional email address.
+3. Create a strong password:
+
+   * 15+ characters (any combo), or
+   * At least 8 characters with 1 number + 1 lowercase letter
+4. Pick a username (used in Git commands too).
+5. Solve CAPTCHA and verify email.
+6. Click your profile picture (top right) to view your username.
+
+---
+
+## 💽 II. Installing Git
+
+### 💡 What is Git?
+
+Git tracks code changes on your computer. GitHub stores those changes online.
+
+### ✅ Steps:
+
+1. Search **“Git Download”** in your browser.
+2. Open the official site and download Git for your OS (Windows, Mac, etc.).
+3. Run the installer (`.exe` file on Windows).
+4. Click **Next** on all steps to keep default settings.
+5. When prompted, select:
+
+   ```
+   Use Git from the command line and also from 3rd-party software.
+   ```
+6. Click **Install** and let it finish setup.
+
+---
+
+## 🔗 III. Linking Git to GitHub
+
+Now connect Git (your computer) with GitHub (online) so you can push code to the cloud.
+
+### ✅ Steps:
+
+1. Open **Command Prompt** (Windows) or **Terminal** (Mac).
+2. Run the following commands (replace with your info):
+
+```bash
+git config --global user.name "YourGitHubUsername"
+git config --global user.email "youremail@example.com"
+```
+
+3. Use double quotes to avoid errors.
+4. Verify your config:
+
+```bash
+git config --global user.name
+git config --global user.email
+```
+
+If both return correct info—you’re connected!
+
+---
+
+## 📌 TL;DR:
+
+* Sign up for GitHub
+* Install Git
+* Link them using `git config` commands
+* You’re now ready to manage code like a pro!
+
+---
+
+## 📊 Quick Reference Table
+
+| Task          | Key Action                                 | Why It Matters                  |
+| ------------- | ------------------------------------------ | ------------------------------- |
+| Create GitHub | Sign up with username + verified email     | Needed for sharing/storing code |
+| Install Git   | Run installer & use defaults               | Track local changes             |
+| Link Account  | Use git config commands                    | Connect your PC to GitHub       |
+| Verify Setup  | View saved username/email via command line | Confirms successful link        |
+
+---
+
+**Written and practiced by: kalyan**
+
