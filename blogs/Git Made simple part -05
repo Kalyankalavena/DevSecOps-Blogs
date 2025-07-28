@@ -19,8 +19,7 @@ Step-by-Step Git Workflow
 Before using Git, tell it who you are:
 
 lua
-Copy
-Edit
+
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 git config --list
@@ -64,7 +63,6 @@ Use this before you start working to get the latest version.
 Branches help you work on new ideas without affecting your main code.
 
 
-Edit
 git branch new-feature
 git checkout new-feature
 Now you're in a safe space to experiment!
