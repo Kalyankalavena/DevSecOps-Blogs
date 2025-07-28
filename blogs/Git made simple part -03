@@ -1,0 +1,151 @@
+# 🌐 Git Beyond the Clouds: How Your Code Travels the World Securely
+
+**🛠 Git, Cloud & Bitbucket: A Practical DevOps Guide by Kalyan Kalavena**
+
+If you're stepping into the DevOps or cloud world, you've probably heard terms like **Git, Bitbucket, Cloud VMs, SSH, AWS, Google Cloud** — sounds like a buffet of tech buzzwords, right?
+
+Don't panic. Here’s your no-fluff guide to how it all fits together 👇
+
+---
+
+## 🧠 Why Version Control Systems Like Git Are a Game Changer
+
+Ever lost a file or messed up code and wished for a *rewind* button?
+
+Welcome to **Version Control Systems (VCS)** — your personal time machine and team collaborator. They:
+
+- 🕓 Track every single change in your project.
+- 👥 Let multiple people work together, conflict-free.
+- ⏮ Allow easy rollback to previous versions (yep, no drama).
+
+---
+
+### 🪜 VCS Evolution 101
+
+| Generation | System Type | Limitation |
+|-----------|-------------|------------|
+| 1st Gen   | Locking Systems | Only one person edits at a time |
+| 2nd Gen   | Centralized (like SVN) | No offline access or local history |
+| 3rd Gen   | Distributed (like Git) | Full history on every machine, works offline 🚀 |
+
+Git wins — fast, secure, collaborative.
+
+---
+
+## 🛠 Must-Know Git Commands (Your Cheat Sheet)
+
+| Command | Description |
+|--------|-------------|
+| `git init` | Initialize a Git repo |
+| `git add <file>` | Stage a file |
+| `git commit -m "msg"` | Save changes with a message |
+| `git push origin master` | Upload code to the remote repo |
+| `git status` | View file changes |
+| `git log` | See commit history |
+| `.gitignore` | Ignore files from tracking |
+
+### First-Time Setup
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+ GitHub vs Bitbucket – Which One Should You Use?
+Both use Git under the hood. The commands are the same — only the interface differs.
+
+💼 Bitbucket is often preferred by companies due to its ability to be hosted on private servers (more security & control).
+
+☁️ Cloud Computing: Why It's the New Normal
+Cloud > Traditional Servers. Period.
+
+Platforms like AWS, Google Cloud, Azure offer:
+
+⚙️ On-demand servers
+
+💰 Reduced hardware cost
+
+🔒 Built-in security
+
+⏱ Speedy deployments
+
+No more server room headaches.
+
+🔑 Top 5 IT Foundations to Learn (ASAP)
+Area	Why It Matters
+A Programming Language (Python/Java)	Code is life
+Linux	Powers 99% of servers
+Networking	Understand IP, DNS, ports
+Databases	Store & query data (MySQL, MongoDB)
+Git	Collaborate & control versions like a boss
+
+🆚 AWS vs Google Cloud Free Tier: Who Wins?
+Feature	AWS	Google Cloud
+Free Credits	Low	₹20,000 ($300) ✅
+RAM	1 GB	6 GB ✅
+Disk	30 GB	Flexible ✅
+Billing	Tricky	Transparent ✅
+
+👉 Winner: Google Cloud (especially for beginners).
+
+⚙️ Spin Up Your First Cloud VM (Google Cloud FTW)
+🔹 Steps to Create VM:
+Sign up at Google Cloud
+
+Choose Individual account
+
+Add your card (₹50 – refunded)
+
+Go to → Compute Engine → VM Instances → Create Instance
+
+Choose:
+
+OS: CentOS 7
+
+RAM: 3.75 GB
+
+Region: Mumbai/Singapore
+
+Enable HTTP/HTTPS access
+
+🎉 Boom! You’ve got your own Linux Cloud Server 💻
+
+🔐 SSH Keys = Secure, Password-Free Login
+📁 Generate SSH Keys:
+mkdir keys_google
+cd keys_google
+ssh-keygen -f gituser
+
+You’ll get two files:
+
+gituser → Your private key (💀 never share)
+
+gituser.pub → Your public key
+
+⬆️ Upload SSH Key to Google Cloud:
+Go to → Compute Engine → Metadata → SSH Keys → Add item
+
+Paste content of gituser.pub
+
+🔌 Connect to Your VM:
+ssh -i gituser gituser@<External-IP>
+💡 If there's a known_hosts error:
+Delete .ssh/known_hosts file on your local system.
+
+Then:
+sudo su -
+📢 Extra Tips + What’s Coming Next
+✅ Stop your VM after use to avoid charges
+shell scripting 
+ansible
+terraform 
+🧩 Final Thoughts
+Git + Linux + Cloud = Your passport to DevOps 🚀
+
+Whether you're switching careers or starting out, this combo is your best investment right now.
+
+👣 Start small. Break things. Learn from chaos. That’s real DevOps.
+
+Thank you 
+kalyan kalavena 
+
+blog :https://essentialdevopslessons.blogspot.com/2025/07/httpskalyankalavena.comgit-beyond-clouds.html
