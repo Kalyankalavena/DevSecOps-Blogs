@@ -1,0 +1,134 @@
+# 🔧 Git & Bitbucket: The Backbone of Team Collaboration | Part 3
+
+📘 **WRITTEN by: _Kalyan Kalavena_**
+
+Welcome back, friends! 👋  
+In our previous blog, we explored the **foundations of Git**.  
+Today, we dive deeper into **Bitbucket** — the enterprise-favorite Git platform, known for its **Jira integration**, **self-hosting capabilities**, and strong **DevSecOps alignment**.
+
+---
+
+## 🏁 I. Why Bitbucket Over GitHub?
+
+While GitHub rules the open-source world, **Bitbucket Server** shines in enterprises because:
+
+- It can be **self-hosted** for more control.
+- Integrates natively with **Jira**, **Bamboo**, and other Atlassian tools.
+- Preferred for **private, secure environments**.
+
+---
+
+## 🛠️ II. Bitbucket Installation Prerequisites
+
+> **Minimum Git Version Required:** `2.11+`  
+> ⚠️ CentOS 7 ships with Git `1.9`, which is too old.
+
+### ✅ Upgrade Git on CentOS 7:
+```bash
+yum install git -y
+
+Or use CentOS 8 for newer Git support.
+
+💻 III. VM Setup for Bitbucket Server
+Before installing Bitbucket:
+
+✅ Assign a static IP
+
+AWS: Elastic IP
+
+GCP: Reserved IP
+
+🔓 Open required firewall ports:
+
+7990 for HTTP access
+
+7999 for SSH access
+
+📦 IV. Installing Bitbucket on Linux
+yum install wget -y
+wget <bitbucket_download_url>
+chmod a+x atlassian-bitbucket-*.bin
+./atlassian-bitbucket-*.bin
+Access Bitbucket from your browser:
+http://<your_static_ip>:7990
+
+🧪 V. Initial Bitbucket Configuration
+🔑 Enter your Atlassian license key
+
+👤 Create the admin account
+
+🔁 Optionally enable the /signup route
+
+📂 VI. Projects & Repositories
+Key Concepts:
+Project: A logical group (e.g., DevSecOps)
+
+Repository: A Git repo under that project (e.g., roboshop-app)
+
+Clone Example:
+in bash 
+git clone http://<your_ip>:7990/scm/devsecops/roboshop-app.git
+🔄 VII. Git Basics Recap – Bitbucket Style
+bash
+git status
+git add index.html
+git commit -m "Added homepage"
+git push origin dev
+Each commit is tracked by a 40-character SHA ID.
+
+🌱 Branching
+bash
+git checkout -b feature-login dev
+git checkout dev
+git push origin feature-login
+
+🌳 VIII. Git Flow: Real-World Branching Strategy
+Branch	Source	Target(s)	Purpose
+feature	development	development	New features
+release	development	master, dev	Release prep
+hotfix	master	master, dev	Urgent fixes
+
+ Long-Lived Branches:
+master = Production
+
+development = Integration
+
+👥 IX. Pull Requests (PRs)
+🧠 "You don’t push to master. You request to merge."
+
+PR Flow:
+🛠 Finish the feature branch
+
+🔃 Create PR to dev or master
+
+👀 Get peer reviewed
+
+✅ Merge when approved
+
+🪶 X. DevSecOps Takeaways
+Practice Git daily — no shortcuts 🧠
+
+Track code with SHA IDs 🔍
+
+Keep branches clean ✂️
+
+Secure with static IP & firewalls 🔒
+
+PRs = discipline + quality control ✅
+
+🚀 What’s Next?
+In the next blog, we'll explore:
+
+rebase vs merge
+
+fast-forward strategies
+
+Trunk-based development for modern DevOps
+
+Stay tuned! 🚀
+
+Thank u 
+kalyan 
+
+blog : https://essentialdevopslessons.blogspot.com/2025/07/httpskalyankalavena.comgit-beyond-clouds.html
+
