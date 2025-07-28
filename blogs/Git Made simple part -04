@@ -42,8 +42,7 @@ Firewall Rules: Open port 7990 for Bitbucket web UI
 
 🔐 2.2 SSH into Linux VM:
 bash
-Copy
-Edit
+
 ssh-keygen                      # Generate SSH key pair
 ssh -i <pem_file> user@<IP>     # SSH into server
 
@@ -70,9 +69,6 @@ git merge feature-1.1               # Merge back
 ⚔️ 3.2 Resolving Conflicts:
 During a merge:
 
-text
-Copy
-Edit
 <<<<<<< HEAD
 // your changes
 =======
