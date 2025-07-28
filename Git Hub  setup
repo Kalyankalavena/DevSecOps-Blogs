@@ -1,0 +1,136 @@
+# Git Branching Strategies: Merge vs. Rebase – A Complete Guide for Beginners
+
+---
+
+## Introduction
+
+If you're starting your journey in DevSecOps or software development, understanding Git's branching strategies is essential. One of the most debated topics among developers is: **Should I use `merge` or `rebase`?** This guide breaks down these two powerful Git commands in simple, human terms so you can make informed decisions, collaborate effectively, and maintain clean commit histories.
+
+---
+
+## Git Merge vs Git Rebase: What’s the Difference?
+
+### Git Merge
+
+* Combines changes from one branch into another (e.g., `feature` into `main`)
+* Creates a **merge commit**, making it clear when and where branches were joined
+* Keeps full history but can get cluttered with too many commits
+
+### Git Rebase
+
+* Replays commits from one branch onto another
+* **Rewrites history** to make the commit log linear and clean
+* No extra merge commits, but should be avoided on shared/public branches
+
+---
+
+## When to Use What (Real-World Scenarios)
+
+### Use Git Merge When:
+
+* You’re working on **shared branches** like `main` or `release`
+* You want to preserve a full history of merges
+* Multiple developers are collaborating, and clarity is more important than cleanliness
+
+### Use Git Rebase When:
+
+* You want a **clean, linear history** for feature branches
+* You’re preparing a pull request or committing a feature developed solo
+* You’re squashing commits to simplify history before merging
+
+---
+
+## Why Merge Creates "Extra Commits"
+
+When you run `git merge feature`, Git creates a **merge commit** even if your work is finished. While this is useful for traceability, it adds noise to your history—especially in large projects.
+
+---
+
+## Rebase and Clean History: A Big Advantage
+
+With `git rebase`, the history looks like your commits were added in a single line, making it easier to review and understand. This is especially helpful for teams that use **pull requests** and want polished commit logs.
+
+---
+
+## The Danger of Rebase: Force Pushing
+
+After a rebase, your commit hashes change. If you push normally, Git will reject it. That’s why you must use:
+
+```bash
+git push --force
+```
+
+Use this carefully. Force-pushing to shared branches can overwrite your teammates’ work.
+
+---
+
+## Interactive Rebase and Squashing
+
+You can use `git rebase -i` to interactively rewrite commits. This is where **squashing** comes in:
+
+* Combine multiple commits into one
+* Clean up small or messy commits
+* Make your pull requests easier to review
+
+Example:
+
+```bash
+git rebase -i HEAD~5
+```
+
+Then change all but the first `pick` to `squash`.
+
+---
+
+## Resolving Conflicts During Rebase
+
+1. Manually fix the conflicting files
+2. Stage the fixes:
+
+```bash
+git add <file>
+```
+
+3. Continue the rebase:
+
+```bash
+git rebase --continue
+```
+
+Do **not** run `git commit` during a rebase conflict—Git will manage that for you.
+
+---
+
+## Fast-Forward Merge: When It’s Just a Move
+
+A **fast-forward merge** happens when the target branch (e.g., `main`) has not diverged. Git simply updates the pointer, with no new commit.
+
+* This keeps history clean, like rebase
+* Happens when no parallel development occurred
+
+---
+
+## Glossary: Learn the Lingo
+
+* **Branching Strategy**: A plan for how and when to use branches
+* **Commit**: A snapshot of your project
+* **Force Push**: Overwrites history on remote
+* **Interactive Rebase**: Lets you edit/squash commits
+* **Merge Commit**: A commit that records a branch merge
+* **Pull Request**: A request to merge one branch into another with code review
+* **Rewriting History**: Changing commit logs (risky on shared branches)
+* **Squashing**: Combining commits for simplicity
+
+---
+
+## Final Thoughts
+
+Both `merge` and `rebase` have their strengths. Merge is safer and preferred for collaboration, while rebase is cleaner and more elegant for individual work. Mastering both is crucial for writing maintainable, professional Git history.
+
+Ready to go deeper? Try practicing with `git log`, `git rebase -i`, and different merge scenarios to understand how your repo evolves.
+
+Happy branching! 🚀
+
+---
+
+**Written & Practiced by:** Kalyan Kalavena
