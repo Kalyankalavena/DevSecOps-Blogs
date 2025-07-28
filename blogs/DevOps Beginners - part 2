@@ -1,0 +1,125 @@
+# DevOps Beginners part 2
+
+– What is a Computer, Linux & Cloud Servers?  
+
+**By Kalyan **  
+*DevSecOps Learning Series – 2025*
+
+---
+
+## 💻 What is a Computer?
+
+- **Input → Process → Output**
+- Key Components:
+  - **RAM** = Temporary memory (fast app performance)
+  - **Storage** = Saves files
+  - **Processor (CPU)** = Main brain
+  - **OS** = Software layer (Windows, Linux, etc.)
+
+---
+
+## 🌍Client-Server Architecture
+
+- **Client** = Browser (you)
+- **Server** = Host (e.g., facebook.com)
+- **Example Flow**:
+  - You type URL → Browser sends request → Server responds with site
+- **Port Forwarding** = Share your local app online
+
+---
+
+## 🐧 What is Linux?
+
+- **Free**, **Open Source**, **Fast**, **Secure**
+- Used in most cloud servers
+
+### ☁️ Cloud Concepts:
+
+- **Region** = Physical location (e.g., Mumbai)
+- **AZ (Availability Zone)** = Data center in region
+- **Instance** = Virtual server
+
+---
+
+### Linux Distributions (Flavours)
+
+- Ubuntu  
+- RHEL  
+- CentOS  
+- Fedora  
+- Android (Linux-based)
+
+---
+
+### Linux Internals
+
+- **Kernel** = Core of OS (written in C)
+- **User Interface** = CLI/GUI for users
+- Created by **Linus Torvalds**
+
+---
+
+##  Firewall (Security Group)
+
+- Controls **inbound** (who enters) & **outbound** (who exits)
+- To allow all traffic: `0.0.0.0/0`
+
+---
+
+## What is AMI?
+
+- **AMI = Amazon Machine Image**
+- Pre-configured OS for AWS EC2 (like a .iso file)
+
+---
+
+## Authentication Methods
+
+1. **What you know** – Password  
+2. **What you have** – OTP / Token  
+3. **What you are** – Biometrics (fingerprint, retina)
+
+---
+
+### 🔑 SSH Keys
+
+- **Public Key** = Lock  
+- **Private Key** = Key
+
+**Generate Key**:
+```bash
+ssh-keygen -f my-key
+
+Linux File Commands
+
+in bash
+
+pwd       # Show current directory
+ls -l     # List files with details
+cd ..     # Move one directory up
+
+File Types:
+
+.pub = Public key
+
+.pem = Private key
+
+
+EC2 Launch Flow (AWS)
+Create SSH key pair
+
+Upload public key to AWS
+
+Configure firewall rules
+
+Launch EC2 instance
+
+SSH into instance
+
+Terminate when done  
+
+for more details vist blog : https://devsecopsbasics.blogspot.com/2025/06/devsecops-blog2-computer-linux-ec2-basics-kalyan.html
+
+Thank you 
+
+
