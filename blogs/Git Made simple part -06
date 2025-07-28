@@ -1,0 +1,94 @@
+Git Merge vs. Git Rebase: The Ultimate Visual Guide for Developers
+
+Written by : kalyan kalavena 
+
+Whether you’re a beginner or a seasoned developer, Git can sometimes feel overwhelming—especially when it comes to merge, rebase, and squash. This detailed guide will help you grasp these concepts with clarity, visuals, and practical understanding.
+
+🔀 What is git merge?
+Merging is the process of integrating changes from one branch into another.
+It’s like saying, “Hey, combine this feature branch with our main branch without losing anything.”
+
+🧠 Behind the Scenes
+Creates a new merge commit to connect the histories of both branches.
+
+No commit IDs are changed—history is preserved.
+
+Multiple contributors can see the original commit flow clearly.
+
+💡 Imagine two roads meeting at a junction. Merge creates a new road from that intersection.
+
+✅ Use Cases for Merging
+Combining feature branches into main or develop.
+
+Working in teams where commit history matters.
+
+Avoiding rewriting commits that others may already have.
+
+🧬 What is git rebase?
+Rebasing is a technique to move or “reapply” commits from one branch on top of another.
+It results in a cleaner, linear history, as if all your changes happened after the latest changes from another branch.
+
+🧠 What Really Happens?
+Commits are rewritten with new commit IDs.
+
+No merge commit is created.
+
+History appears sequential and clean.
+
+💡 Think of it like re-writing your diary so it looks like everything happened in perfect order.
+
+✅ Use Cases for Rebasing
+Working on your own feature branch.
+
+Cleaning up messy history before merging.
+
+Wanting a project history that’s easier to read.
+
+⚠️ A Word of Caution
+❗ Never rebase public or shared branches unless everyone understands Git very well.
+Rewriting history can lead to confusion and errors for collaborators.
+
+🎯 Interactive Rebase and Squashing Commits
+git rebase -i allows you to not only rebase, but also clean up your commit history by combining commits.
+
+What is Squashing?
+Squashing means combining multiple commits into one. It's useful when your branch has a bunch of WIP (work-in-progress) commits that clutter the history.
+
+🧪 Example Flow:
+Run: git rebase -i HEAD~4
+
+Change pick to squash for the last 3 commits.
+
+Write a meaningful commit message.
+
+Done! You now have a polished history.
+
+📊 Git Merge vs Git Rebase: Visual Comparison
+Feature	Merge	Rebase
+Creates extra commit?	Yes (merge commit)	No
+History style	Branching, non-linear	Linear and clean
+Preserves commit history?	Yes	No (rewrites)
+Safe for teams?	Yes	Only in local/private branches
+Conflict resolution	Once (at merge)	Multiple (per commit)
+
+📁 Modern Git Branching Strategy
+To make version control simpler, many teams now use a 3-branch model:
+
+main: Always deployable production-ready code.
+
+integration: Temporary environment to test all combined features.
+
+feature/*: Each developer works in their own feature branch.
+
+This structure works great with CI/CD pipelines and modern DevOps workflows.
+
+🧠 Summary
+Use merge to preserve history and show how changes were integrated.
+Use rebase for a cleaner commit timeline, especially when working solo.
+Use squash to simplify and polish your work before sharing or merging.
+
+Blog : https://essentialdevopslessons.blogspot.com/2025/07/git-merge-vs-rebase-guide.html
+
+Thank you 
+kalyan kalavena 
+
