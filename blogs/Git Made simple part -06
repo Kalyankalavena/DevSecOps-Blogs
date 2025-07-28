@@ -1,0 +1,133 @@
+# Git Beyond the Clouds: How Code Travels, Collaborates & Secures Itself
+
+**By Kalyan Kalavena**
+
+This blog dives deep into advanced Git concepts and practical Bitbucket-based collaboration techniques, gathered from three in-depth sessions. You’ll walk away with strong command-line Git usage, team workflows, and infrastructure basics—all tailored for real-world DevSecOps environments.
+
+---
+
+## 🧠 1. Introduction to Git and Version Control
+
+Git is a **third-generation distributed version control system (DVCS)** that solves issues left by older systems:
+
+| Generation | Tool          | Issues |
+|------------|---------------|--------|
+| 1st        | SharePoint    | Locked files (no collaboration) |
+| 2nd        | SVN           | Centralized, only working copy local |
+| 3rd        | Git           | Full local repo, offline commit, great branching |
+
+🔑 *Git doesn’t need internet for commits — only to push!*
+
+### 📦 Essential Git Commands Recap:
+
+```bash
+
+git init                        # Initialize a Git repo
+git status                      # Show file states
+git add <file>                 # Stage changes
+git commit -m "msg"             # Commit staged changes
+git push origin master          # Push to central repo
+
+git config --global user.name "your name"
+git config --global user.email "email"
+git log                         # See commit history
+
+☁️ 2. Setting Up a Bitbucket-Based Git Server on GCP
+🧰 2.1 GCP Infra Setup:
+VM Spec: CentOS 8 (supports Git 2.11+)
+
+Static IP: Avoids broken Bitbucket links
+
+Firewall Rules: Open port 7990 for Bitbucket web UI
+
+🔐 2.2 SSH into Linux VM:
+bash
+Copy
+Edit
+ssh-keygen                      # Generate SSH key pair
+ssh -i <pem_file> user@<IP>     # SSH into server
+
+🛠️ 2.3 Bitbucket Installation:
+
+bash
+yum install git -y
+wget <bitbucket_installer>
+chmod +x <installer_file>
+./<installer_file>
+Open Bitbucket at: http://<Static-IP>:7990
+
+Enable public sign-ups for team practice
+
+🔁 3. Git Collaboration and Branching Models
+
+🌿 3.1 Creating and Merging Branches:
+bash
+git branch                          # List branches
+git checkout -b feature-1.1 master  # New branch from master
+git push origin feature-1.1         # Push to remote
+git checkout master
+git merge feature-1.1               # Merge back
+⚔️ 3.2 Resolving Conflicts:
+During a merge:
+
+text
+Copy
+Edit
+<<<<<<< HEAD
+// your changes
+=======
+...incoming changes
+>>>>>>> commitID
+Resolve manually:
+
+bash
+git add filename
+git commit -m "Resolved merge conflict"
+git push origin branch_name
+🚀 3.3 Git Flow Model (Team Strategy):
+Branch	Purpose
+master	Production-ready code
+development	Next release staging
+feature/*	New features
+release/*	Stabilization
+hotfix/*	Emergency prod fixes
+
+❗ Downside: Too many long-lived branches — may not suit Agile/microservices.
+
+📥 3.4 Pull Requests (PRs) in Bitbucket:
+Dev finishes feature branch
+
+Creates PR into development
+
+Team reviews, comments, approves
+
+Permissions restrict direct pushes to master/dev
+
+🔀 3.5 Merge vs Rebase (Quick Glance):
+Method	Pros	Cons
+Merge	Preserves history	Messy log
+Rebase	Clean, linear history	Rewrite commits (dangerous on shared branches)
+
+📌 Detailed breakdown coming in Part.
+
+📚 4. Keep Learning! DevSecOps Tech Stack:
+Learn these for full-stack DevSecOps mastery:
+
+💻 Languages: Java, Python
+
+🐧 Linux: System commands, scripting
+
+🌐 Networking: IP, DNS, routing
+
+🗃️ Databases: MySQL, MongoDB
+
+🐳 Docker & CI/CD: Jenkins, pipelines
+
+👉 Share this with your teammates & beginners—it could change their Git game forever.
+
+blog: https://essentialdevopslessons.blogspot.com/2025/07/git-cloud-collab%20.html
+
+Thank you 
+
+Kalyan kalavena 
+
