@@ -1,0 +1,173 @@
+# 🌐 Git, Cloud & Bitbucket: Your Practical Guide to Real-World DevOps
+
+> 📌 **written by : Kalyan Kalavena  
+
+---
+
+If you're starting your journey into DevOps or cloud computing, you're probably hearing a lot of terms: **Git**, **Bitbucket**, **Cloud VMs**, **SSH keys**, **AWS**, **Google Cloud**... it can feel overwhelming.
+
+Don’t worry — this is your friendly guide to understand how all these pieces connect and why they matter.
+
+---
+
+## 🧠 Why Version Control Systems Like Git Are Essential
+
+Ever lost a file because you forgot to save the backup? Or clashed with a teammate editing the same document?
+
+That’s what **Version Control Systems (VCS)** solve. They:
+
+- Track every change in your files.
+- Let multiple people work on the same project.
+- Allow you to roll back to older versions if needed.
+
+### 🪜 VCS Evolution Made Simple:
+
+- **1st Gen (Locking systems):** Only one person could work on a file at a time.
+- **2nd Gen (Centralized like SVN):** You get a working copy, but no local history.
+- **3rd Gen (Distributed like Git):** Everyone has a full copy and can work offline!
+
+> 💬 "Git gives you speed, safety, and collaboration — all in one."
+
+---
+
+## 🛠️ Must-Know Git Commands
+
+Here’s your cheat sheet:
+
+| Command | What It Does |
+|--------|---------------|
+| `git init` | Start a new Git project |
+| `git add <file>` | Stage file changes |
+| `git commit -m "msg"` | Save changes with a message |
+| `git push origin master` | Upload code to remote repo |
+| `git status` | Check file changes |
+| `git log` | View commit history |
+| `.gitignore` | Skip files you don’t want tracked |
+
+**First-time setup:**
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+🔄 GitHub vs Bitbucket – Which One to Use?
+Both platforms are built on Git. The commands stay the same — only the interface is different.
+
+💼 Companies often prefer Bitbucket over GitHub because it can be installed on their own secure servers. That means more control and privacy.
+
+☁️ Why Cloud Computing is the Future (And Present)
+Gone are the days of maintaining huge physical servers. Today, companies use cloud platforms like:
+
+AWS
+
+Google Cloud
+
+Microsoft Azure
+
+Benefits of the cloud:
+
+Lower hardware costs.
+
+Better security.
+
+Instant server launch.
+
+Focus on code, not infrastructure setup.
+
+🔑 5 Tech Basics You Must Learn (for Any IT Job)
+A Programming Language (e.g., Python, Java)
+
+Operating System (Linux is preferred)
+
+Networking (IP, DNS, ports)
+
+Databases (MySQL, MongoDB)
+
+Git (Version Control)
+
+💬 "Master these basics and you can learn anything else faster."
+
+🆚 AWS vs Google Cloud: Which Free Tier Is Better?
+Feature	AWS	Google Cloud
+Free Credits	Low	₹20,000 ($300)
+RAM	1 GB	6 GB
+Disk	30 GB	Flexible
+Charges	May surprise you	Transparent billing
+
+👀 Tip: Google Cloud offers more RAM and beginner-friendly billing.
+
+🛠️ How to Create Your Own Cloud VM (Step-by-Step)
+Sign up at Google Cloud → Choose Individual account.
+
+Add your card (₹50 is temporarily charged and refunded).
+
+Go to Compute Engine → VM Instances → Create Instance
+
+Choose:
+
+OS: CentOS 7
+
+RAM: 3.75 GB
+
+Region: Mumbai/Singapore
+
+Enable HTTP/HTTPS access
+
+🎉 You’ve just created your own Linux cloud server!
+
+🔐 Secure Server Access with SSH Keys (No Passwords!)
+Step 1: Generate SSH Keys 
+
+mkdir keys_google
+cd keys_google
+ssh-keygen -f gituser
+This gives you two files:
+
+gituser → Your private key (keep it safe!)
+
+gituser.pub → Your public key
+
+Step 2: Upload to Google Cloud
+Go to Compute Engine → Metadata → SSH Keys
+
+Click Add Item and paste gituser.pub
+
+Step 3: Connect to VM
+ssh -i gituser gituser@<External-IP>
+If there's an error about known_hosts, delete .ssh/known_hosts from your system.
+
+Once connected, switch to root:
+sudo su -
+
+📢 Extra Tips and Future Plans
+✅ Stop your VM after practice to avoid charges.
+
+📌 Static IP setup guide coming soon.
+
+👨‍🏫 Follow DevOps Siva Kumar on YouTube for Linux & Networking.
+
+🧑‍🤝‍🧑 Slack group coming soon for Q&A.
+
+📅 Upcoming blog topics:
+
+Java Basics
+
+Docker
+
+Shell Scripting
+
+AWS Tools
+
+Data Science intro
+
+🧩 Final Thoughts
+💬 "Git and Linux are your entry ticket to DevOps and cloud careers."
+
+Whether you're switching to IT or just getting started, learning Git + Cloud + Bitbucket is the smartest move right now.
+
+Start small. Practice regularly. Break things and fix them — that’s how real learning happens 💡
+
+Thank you 
+kalyan 
+🔗 Blog Version: https://essentialdevopslessons.blogspot.com/2025/07/learn-git-easy.html
+
