@@ -1,0 +1,101 @@
+# 📘 Blog 3: Learning Linux – The Language of DevSecOps  
+**Written & Practiced by Kalyan Kalavena**  
+
+---
+
+## 🚀 Why Linux?
+
+Linux is the backbone of DevSecOps. If you're serious about this path, Linux isn’t optional — it’s your native tongue.
+
+Here’s why:
+| Area        | Linux Role                        |
+|-------------|-----------------------------------|
+| Cloud       | Most servers are Linux-based      |
+| Security    | Permissions, users, hardening     |
+| Automation  | Scripting, cronjobs, log parsing  |
+| Performance | Lightweight and fast              |
+
+---
+
+## 📂 File & Folder Basics
+
+```bash
+pwd                # Show current directory
+ls                 # List files
+cd folder          # Go into folder
+cd ..              # Go up one level
+mkdir newfolder    # Make a folder
+touch file.txt     # Make a file
+rm file.txt        # Delete a file
+
+👨‍💻 Real-Time Mini Task
+
+mkdir projects
+cd projects
+touch notes.txt
+ls
+📝 Output: notes.txt
+
+🛠️ File Viewing & Editing
+
+cat file.txt       # Show contents
+vi file.txt        # Use VIM (powerful)
+nano file.txt      # Use Nano (simple)
+
+🧠 Combine Commands Like a Pro
+
+mkdir logs && cd logs && touch app.log
+🎯 One-liner to:
+
+Create folder
+
+Enter it
+
+Make a file
+
+🔐 User Access Levels
+Symbol	Access Level
+$	Normal User
+#	Root/Admin
+
+
+sudo su        # Switch to root
+sudo su -      # Full root access
+
+📂 Listing Variants
+
+ls -l      # Detailed list
+ls -lt     # Latest files first
+ls -ltr    # Oldest files first
+ls -la     # Show hidden files
+
+🌍 Download Files
+
+wget https://example.com/file.zip
+curl https://example.com
+curl -o myfile.txt https://example.com
+
+🔎 Search, Filter, Extract
+
+grep "root" /etc/passwd              # Search keyword
+cut -d ":" -f1 /etc/passwd           # Show usernames
+awk -F ":" '{print $1}' /etc/passwd # Same as above
+find / -name "file.txt"             # Find file system-wide
+
+☁️ Connect to EC2 (AWS)
+
+# 1. Generate key
+# 2. Import to AWS
+# 3. Set firewall (security group)
+# 4. Launch EC2
+ssh -i your-key.pem ec2-user@your-ec2-ip
+# 5. Terminate when done
+✅ Summary
+Linux is your DevSecOps toolkit starter pack. Know it, type it, breathe it.
+
+For more details visit blog : https://devsecopsbasics.blogspot.com/2025/06/linux-commands-basics-for-devsecops-kalyan.html
+
+Thank you 
+
+
+
