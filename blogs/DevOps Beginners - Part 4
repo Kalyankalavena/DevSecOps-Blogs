@@ -1,0 +1,77 @@
+# 🔐 Blog 4: Linux Command Mastery – Your First Real Step into DevSecOps
+
+*By Kalyan Kalavena – Learn Linux like you’re talking to a machine, not fighting one.*
+
+---
+
+## 🚀 Why Linux is Essential in DevSecOps
+
+If you're serious about DevSecOps, the first skill you must master is **Linux**. It powers cloud servers, automation scripts, and production environments across the world.
+
+- **Cloud Servers**: Most use Linux OS (e.g., Ubuntu, Amazon Linux)
+- **Security**: File permissions, SSH access, user control
+- **Automation**: Bash scripts, cron jobs, logs
+- **Speed**: Lightweight, resource-efficient
+
+---
+
+## 📂 Getting Started – File & Folder Navigation
+
+```bash
+pwd               # Show current directory  
+ls                # List files  
+cd foldername     # Enter folder  
+cd ..             # Go back one level  
+mkdir myfolder    # Create new folder  
+touch file.txt    # Create an empty file  
+rm file.txt       # Delete file (carefully!)
+
+Simple Use Case
+
+mkdir projects  
+cd projects  
+touch notes.txt  
+ls  
+# Output: notes.txt
+
+Viewing and Editing Files
+
+cat filename       # See file contents  
+vi filename        # VIM editor  
+nano filename      # Simpler editor
+⚙️ Combo Command Tip
+mkdir logs && cd logs && touch app.log
+This creates a folder, enters it, and creates a file in one go!
+
+ SSH Access & File Permissions
+
+ssh -i <private-key-path> ec2-user@<IP>
+Path Explanation:
+
+Absolute: /c/devops/daws-82s/daws-82s.pem
+
+Relative: daws-82s/daws-82s.pem
+
+📌 Important Commands Cheat Sheet
+
+ls -l       # Detailed view  
+ls -lt      # Sort by latest  
+ls -ltr     # Oldest files last  
+ls -la      # Show hidden files
+
+cat > file.txt    # Write text, save with Ctrl+D  
+>>                # Append to file  
+mkdir folder      # Create directory  
+rm -r folder      # Delete directory recursively
+🔍 Searching and Filtering
+
+grep "keyword" filename  
+cat filename | grep "keyword"
+
+# Cut Example
+cut -d "/" -f9
+
+# AWK Examples
+awk -F ":" '{print $1}' /etc/passwd
+
+visit blog for more detials : 
