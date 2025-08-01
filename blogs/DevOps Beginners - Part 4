@@ -74,4 +74,6 @@ cut -d "/" -f9
 # AWK Examples
 awk -F ":" '{print $1}' /etc/passwd
 
-visit blog for more detials : 
+visit blog for more detials : https://devsecopsbasics.blogspot.com/2025/06/devsecops-linux-basics-kalyan-kalavena_01188825568.html
+
+Thank you 
