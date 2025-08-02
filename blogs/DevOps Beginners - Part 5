@@ -40,9 +40,7 @@ Shift+G Jump to bottom
 In DevSecOps, user access = security control. Here's how to manage it like a pro:
 
 ✅ Basic User Commands
-pgsql
-Copy
-Edit
+
 useradd kalyan                Create a new user
 id kalyan                     View user details
 passwd kalyan                 Set a password
@@ -52,9 +50,7 @@ usermod -aG testing kalyan    Add secondary group
 🎯 A user has one primary group, but can belong to multiple secondary groups.
 
 ❌ How to Delete a User Safely
-nginx
-Copy
-Edit
+
 userdel kalyan
 Step-by-step:
 
@@ -66,22 +62,15 @@ Then delete user
 
 🔐 SSH Configuration & Key-Based Login
 📁 SSH Config File:
-bash
-Copy
-Edit
+
 /etc/ssh/sshd_config
 🔄 Service Commands
-pgsql
-Copy
-Edit
+
 systemctl restart sshd    Restart SSH service
 sshd -t                   Test SSH config syntax
 🗝️ Key-Based Authentication (Secure Login Without Passwords)
 Generate SSH Key Pair:
 
-vbnet
-Copy
-Edit
 ssh-keygen -f kalyan-key
 Upload .pub to server’s ~/.ssh/authorized_keys
 
@@ -100,4 +89,7 @@ SSH key auth is a DevSecOps must-have for secure automation.
 This is Blog 4 in my DevSecOps Journey.
 Each command, each tool — building me one step closer to being a real DevSecOps Engineer.
 
-– By Kalyan Kalavena. All rights reserved. No edits allowed without permission.
+for details visit blogs : https://devsecopsbasics.blogspot.com/2025/07/blog-5-vim-user-management-devsecops-kalyan.html
+
+Thank you
+– By Kalyan Kalavena
