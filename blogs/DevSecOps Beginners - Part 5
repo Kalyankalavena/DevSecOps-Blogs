@@ -1,0 +1,106 @@
+Blog 4: VIM & User Management – Secret Tools of Every DevSecOps Pro
+🧑‍💻 By Kalyan Kalavena | 🔐 All Rights Reserved
+
+✍️ What Is the VIM Editor in Linux?
+VIM (Vi IMproved) is a legendary terminal-based text editor in Linux. It’s lightning-fast, purely keyboard-driven, and a favorite among system admins, developers, and DevSecOps pros for editing configuration files and code securely—directly from the terminal.
+
+🔑 VIM Modes
+ESC Mode (Default) → For navigation and command inputs.
+
+Insert Mode → Press i to start editing text.
+
+Command Mode → Press : to start entering commands (e.g., :wq).
+
+📄 Common VIM Commands (Command Mode :)
+pgsql
+Copy
+Edit
+:q              Quit
+:wq             Save and Quit
+:q!             Force Quit (discard changes)
+:/word          Search from top
+:?word          Search from bottom
+:noh            Remove highlight
+:set nu         Show line numbers
+:set nonu       Hide line numbers
+:28d            Delete 28th line
+:3s/old/new     Replace first match in line 3
+:3s/old/new/g   Replace all in line 3
+:%s/old/new/g   Replace all in file
+:%d             Delete all content
+🧠 ESC Mode Shortcuts (Navigation + Editing)
+pgsql
+Copy
+Edit
+u       Undo
+yy      Copy current line
+p       Paste
+10p     Paste 10 times
+dd      Cut current line
+gg      Jump to top
+Shift+G Jump to bottom
+👤 Linux User Management – Real World Admin Ops
+In DevSecOps, user access = security control. Here's how to manage it like a pro:
+
+✅ Basic User Commands
+pgsql
+Copy
+Edit
+useradd kalyan                Create a new user
+id kalyan                     View user details
+passwd kalyan                 Set a password
+groupadd devops               Create a group
+usermod -g devops kalyan      Set primary group
+usermod -aG testing kalyan    Add secondary group
+🎯 A user has one primary group, but can belong to multiple secondary groups.
+
+❌ How to Delete a User Safely
+nginx
+Copy
+Edit
+userdel kalyan
+Step-by-step:
+
+Remove from groups
+
+Remove from projects
+
+Then delete user
+
+🔐 SSH Configuration & Key-Based Login
+📁 SSH Config File:
+bash
+Copy
+Edit
+/etc/ssh/sshd_config
+🔄 Service Commands
+pgsql
+Copy
+Edit
+systemctl restart sshd    Restart SSH service
+sshd -t                   Test SSH config syntax
+🗝️ Key-Based Authentication (Secure Login Without Passwords)
+Generate SSH Key Pair:
+
+vbnet
+Copy
+Edit
+ssh-keygen -f kalyan-key
+Upload .pub to server’s ~/.ssh/authorized_keys
+
+Keep .pem or private key secure and secret
+
+✅ SSH keys = Login automation + military-grade security
+
+📌 Summary: What Kalyan Learned Today
+VIM is a keyboard-based, lightning-fast editor you’ll use daily.
+
+User management helps control access and apply least-privilege policies.
+
+SSH key auth is a DevSecOps must-have for secure automation.
+
+🛡️ End Note:
+This is Blog 4 in my DevSecOps Journey.
+Each command, each tool — building me one step closer to being a real DevSecOps Engineer.
+
+– By Kalyan Kalavena. All rights reserved. No edits allowed without permission.
