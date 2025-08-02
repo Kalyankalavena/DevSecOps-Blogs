@@ -1,5 +1,5 @@
 Blog 4: VIM & User Management – Secret Tools of Every DevSecOps Pro
-🧑‍💻 By Kalyan Kalavena | 🔐 All Rights Reserved
+🧑‍💻 By Kalyan Kalavena 
 
 ✍️ What Is the VIM Editor in Linux?
 VIM (Vi IMproved) is a legendary terminal-based text editor in Linux. It’s lightning-fast, purely keyboard-driven, and a favorite among system admins, developers, and DevSecOps pros for editing configuration files and code securely—directly from the terminal.
@@ -12,9 +12,7 @@ Insert Mode → Press i to start editing text.
 Command Mode → Press : to start entering commands (e.g., :wq).
 
 📄 Common VIM Commands (Command Mode :)
-pgsql
-Copy
-Edit
+
 :q              Quit
 :wq             Save and Quit
 :q!             Force Quit (discard changes)
@@ -28,10 +26,9 @@ Edit
 :3s/old/new/g   Replace all in line 3
 :%s/old/new/g   Replace all in file
 :%d             Delete all content
+
 🧠 ESC Mode Shortcuts (Navigation + Editing)
-pgsql
-Copy
-Edit
+
 u       Undo
 yy      Copy current line
 p       Paste
