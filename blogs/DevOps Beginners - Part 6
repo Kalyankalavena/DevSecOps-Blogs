@@ -77,5 +77,9 @@ chmod, chown	Control file and folder access
 SSH	Set up password-less, secure remote access
 DNF/YUM	Manage software packages on Linux
 systemctl	Start, stop, restart services like a pro
-ps, netstat	Monitor processes and resolve port issues
+ps, netstat	Monitor processes and resolve port issues 
+
+blog : https://devsecopsbasics.blogspot.com/2025/07/linux-permissions-ssh-service-management-devsecops.html
+
+thank you
 
