@@ -1,92 +1,81 @@
-# Git Beyond Clouds: Part 6 – Git Merge vs Rebase  
-**Git Merge vs. Git Rebase: The Ultimate Visual Guide for Developers**  
-📘 *Written by Kalyan Kalavena
+🔐 Blog 6: Linux Permissions, SSH & Service Management – DevSecOps Foundations
 
-Whether you’re a beginner or a seasoned developer, Git can sometimes feel overwhelming—especially when it comes to `merge`, `rebase`, and `squash`. This detailed guide helps you master these concepts with clarity, visuals, and practical application.
+✍️ written by Kalyan Kalavena
 
----
-## 🔀 What is `git merge`?
+🧑‍💻 Why This Blog Matters
+As a DevSecOps engineer, it’s not just CI/CD pipelines and Kubernetes all day. You’ll regularly need to:
 
-Merging is the process of integrating changes from one branch into another.  
-It’s like saying:
+Control who accesses what using Linux file permissions
+Securely connect to servers using SSH
+Manage running services like Nginx or Jenkins
+Monitor processes and troubleshoot port conflicts
+This is real-world Linux stuff that makes you dangerous in a good way.
 
-> “Hey, combine this feature branch with our main branch without losing anything.”
+🔐 1. Linux File & Folder Permissions
+🧮 Numeric Permission Codes
+Symbol	Code	Meaning
+r	4	Read
+w	2	Write
+x	1	Execute
 
-### 🧠 Behind the Scenes
-- Creates a **new merge commit** to connect histories of both branches
-- No commit IDs are changed — **history is preserved**
-- Multiple contributors can clearly see the original flow
+🔍 Real Example
 
-💡 *Imagine two roads meeting at a junction. Merge creates a new road from that intersection.*
+-rw-r--r-- 1 ec2-user ec2-user  myfile.txt
+Owner → Read & Write (rw-)
 
-### ✅ Use Cases for Merging
-- Merging feature branches into `main` or `develop`
-- Working in teams where **commit history matters**
-- Avoiding rewrite of commits that others may already have
+Group → Read only (r--)
 
----
+Others → Read only (r--)
 
-## 🧬 What is `git rebase`?
+🔧 Useful Commands
 
-Rebasing is a technique to move or **reapply** commits from one branch onto another.  
-It results in a **cleaner, linear history**, as if all changes happened after the latest base branch update.
+chmod o+w file.txt        # Give write to others
+chmod o-r file.txt        # Remove read from others
+chmod ugo+rwx file.txt    # Give all access to everyone
+chmod 740 file.txt        # u: read/write/execute, g: read, o: no access
 
-### 🧠 What Really Happens?
-- Commits are **rewritten** with new commit IDs
-- No merge commit is created
-- History appears **sequential and clean**
+🧑‍🚀 2. SSH Key-Based Login
+SSH is how you log into cloud servers without typing passwords like a noob.
 
-💡 *Think of it like rewriting your diary so it looks like everything happened in perfect order.*
+🚀 Steps to Setup:
+mkdir ~/.ssh
+chown kalyan:kalyan ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
 
-### ✅ Use Cases for Rebasing
-- When you're working on a **solo feature branch**
-- Cleaning up messy commit history before a PR
-- Wanting a timeline that reads like a **story**
+🔑 Login Using:
+ssh -i kalyan.pem kalyan@<IP_ADDRESS>
 
-### ⚠️ A Word of Caution
-> Never rebase public/shared branches unless your team is fully Git-savvy.  
-> Rewriting history can lead to major confusion or lost work.
+📦 3. Package Management with DNF/YUM
+Install, list, and remove packages — especially web servers, monitoring tools, or security agents.
 
----
+🔧 DNF Commands
+dnf install nginx -y       # Install Nginx
+dnf remove nginx           # Remove Nginx
+dnf list installed         # List all installed packages
+dnf list available         # List what's available to install
 
-## 🎯 Interactive Rebase and Squashing Commits
+🛠️ 4. Managing Services with systemctl
+Systemd is your friend. Control all services (daemons) like this:
+systemctl status sshd       # Check if SSH is running
+systemctl start nginx       # Start Nginx
+systemctl stop nginx        # Stop Nginx
+systemctl restart nginx     # Restart Nginx
+systemctl enable nginx      # Enable on boot
 
-Rebase can be made interactive using:
+🔍 5. Monitoring Processes & Ports
+Track what’s running and kill what’s misbehaving.
+ps -ef | grep nginx         # See if Nginx is running
+kill <PID>                 # Gently stop a process
+kill -9 <PID>              # Force kill
+netstat -lntp              # Show listening ports + which process is using them
 
-```bash
-git rebase -i HEAD~4
-
-This opens a list of your last 4 commits. You can:
-
-Change pick to squash on the last 3 commits
-
-Combine them into a single, polished commit
-
-Write a clean, meaningful message
-
-✅ Result: A polished, professional-looking commit history.
-
-📊 Git Merge vs Git Rebase – Visual Comparison
-Feature	Merge ✅	Rebase 🔁
-Creates extra commit?	Yes (merge commit)	No
-History style	Branching, non-linear	Linear and clean
-Preserves history?	Yes	No (rewrites)
-Safe for teams?	Yes	Only for local
-Conflict resolution	Once (at merge)	Multiple (per commit)
-
-📁 Modern Git Branching Strategy
-To simplify Git workflows, many teams now follow a 3-branch strategy:
-
-main: Production-ready, always deployable 🚀
-integration: Temporary QA/testing branch 🧪
-feature/*: Individual developer branches for isolated work 🧰
-
-This structure integrates beautifully with modern CI/CD pipelines and automated DevSecOps workflows.
-
-🧠 Summary
-Use merge when you want to preserve full history and showcase team contributions
-Use rebase when you want a clean, streamlined timeline (especially working solo)
-Use squash before merging to tidy up WIP commits and polish your PRs
-
-for more details visit blog : 
+✅ Summary – What You’ve Mastered
+Skill Area	What You Can Now Do
+chmod, chown	Control file and folder access
+SSH	Set up password-less, secure remote access
+DNF/YUM	Manage software packages on Linux
+systemctl	Start, stop, restart services like a pro
+ps, netstat	Monitor processes and resolve port issues
 
