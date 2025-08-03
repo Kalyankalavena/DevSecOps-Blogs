@@ -5,7 +5,6 @@
 Whether you’re a beginner or a seasoned developer, Git can sometimes feel overwhelming—especially when it comes to `merge`, `rebase`, and `squash`. This detailed guide helps you master these concepts with clarity, visuals, and practical application.
 
 ---
-
 ## 🔀 What is `git merge`?
 
 Merging is the process of integrating changes from one branch into another.  
@@ -79,16 +78,15 @@ Conflict resolution	Once (at merge)	Multiple (per commit)
 To simplify Git workflows, many teams now follow a 3-branch strategy:
 
 main: Production-ready, always deployable 🚀
-
 integration: Temporary QA/testing branch 🧪
-
 feature/*: Individual developer branches for isolated work 🧰
 
 This structure integrates beautifully with modern CI/CD pipelines and automated DevSecOps workflows.
 
 🧠 Summary
-
 Use merge when you want to preserve full history and showcase team contributions
 Use rebase when you want a clean, streamlined timeline (especially working solo)
 Use squash before merging to tidy up WIP commits and polish your PRs
+
+for more details visit blog : 
 
